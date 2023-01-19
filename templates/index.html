@@ -42,46 +42,40 @@
                     </ul>
                 </li>
             </ul>
-            <form class="d-flex" method="GET" action="/page4">
+            <form class="d-flex" method="GET" action="/search/">
                 <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
                 <button class="btn btn-outline-success" type="submit">Поиск</button>
+
             </form>
         </div>
     </div>
 </nav>
 
-<p class="text-sm-start">Start aligned text on viewports sized SM (small) or wider.</p>
+<p class="text-sm-start">Расписание</p>
 
+  {% for post in posts %}
 <table class="table">
     <thead>
     <tr>
         <th scope="col">#</th>
-        <th scope="col">First</th>
-        <th scope="col">Last</th>
-        <th scope="col">Handle</th>
+        <th scope="col">урок</th>
+        <th scope="col">день недели</th>
+        <th scope="col">кабинет</th>
     </tr>
     </thead>
     <tbody>
     <tr>
-        <th scope="row">1</th>
-        <td>Mark</td>
-        <td>Otto</td>
-        <td>@mdo</td>
-    </tr>
-    <tr>
-        <th scope="row">2</th>
-        <td>Jacob</td>
-        <td>Thornton</td>
-        <td>@fat</td>
-    </tr>
-    <tr>
-        <th scope="row">3</th>
-        <td colspan="2">Larry the Bird</td>
-        <td>@twitter</td>
+        <th scope="row"></th>
+        <td>{{post.discipline}}</td>
+        <td>{{post.day_week}}</td>
+        <td>{{post.classroom}}</td>
     </tr>
     </tbody>
 </table>
-
+    {% endfor %}
 
 </body>
 </html>
+
+
+
